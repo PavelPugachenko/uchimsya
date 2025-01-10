@@ -8,7 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 class BooksListView(ListView):
     model = Book
     template_name = 'library/books_list.html'
-    context_object_name = 'book'
+    context_object_name = 'books'
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -23,12 +23,13 @@ class BookCreateView(CreateView):
 class BookDetailView(DetailView):
     model = Book
     template_name = 'library/book_detail.html'
-    context_object_name = 'book'
+    context_object_name = 'books'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['author_books_count'] = Book.objects.filter(author=self.object.author).count()
         return context
+
 
 
 class BookUpdateView(UpdateView):
