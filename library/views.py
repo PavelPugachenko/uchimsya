@@ -10,9 +10,13 @@ class BooksListView(ListView):
     template_name = 'library/books_list.html'
     context_object_name = 'book'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(publication_date__year__gt=1900)
+
 class BookCreateView(CreateView):
     model = Book
-    fields = ['titele', 'publication_date','author']
+    fields = ['title', 'publication_date','author']
     template_name = 'library/books_form.html'
     success_url = reverse_lazy('library:books_list')
 
@@ -20,6 +24,12 @@ class BookDetailView(DetailView):
     model = Book
     template_name = 'library/book_detail.html'
     context_object_name = 'book'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['author_books_count'] = Book.objects.filter(author=self.object.author).count()
+        return context
+
 
 class BookUpdateView(UpdateView):
     model = Book
