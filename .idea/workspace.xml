@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad73ea97-2ac9-46f8-bb6d-b2f09a9f23e6" name="Changes" comment="1">
+    <list default="true" id="ad73ea97-2ac9-46f8-bb6d-b2f09a9f23e6" name="Changes" comment="112">
+      <change afterPath="$PROJECT_DIR$/library/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/templates/library/author_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/templates/library/authors_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/management/commands/createadmin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/templates/library/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/library/templates/library/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/templates/library/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/library/templates/library/book_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/templates/library/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/library/templates/library/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +29,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PavelPugachenko&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:PavelPugachenko/practic.git&quot;,
+    &quot;accountId&quot;: &quot;bf7fcc79-6d78-41e8-a9de-5f71a544d0f5&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -38,9 +62,15 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pavel/PycharmProjects/rabotka/library/templates/library&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library/templates/library" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736538043527</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="112">
+      <option name="closed" value="true" />
+      <created>1736538997075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736538997075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -97,6 +135,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="112" />
+    <option name="LAST_COMMIT_MESSAGE" value="112" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/library/migrations/0001_initial.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

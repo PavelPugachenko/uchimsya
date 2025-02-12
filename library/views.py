@@ -1,9 +1,29 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-
-from .models import Book
+from .forms import BookForm, AuthorForm
+from .models import Book, Author
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
+class AuthorListView(ListView):
+    model = Author
+    template_name = 'library/authors_list.html'
+    context_object_name = 'authors'
+
+
+class AuthorCreateView(CreateView):
+    model = Author
+    form_class = AuthorForm
+    template_name = 'library/author_form.html'
+    success_url = reverse_lazy('library:authors_list')
+
+class AuthorUpdateView(UpdateView):
+    model = Author
+    form_class = AuthorForm
+    template_name = 'library/author_form.html'
+    success_url = reverse_lazy('library:authors_list')
+
+
 
 class BooksListView(ListView):
     model = Book
@@ -16,7 +36,7 @@ class BooksListView(ListView):
 
 class BookCreateView(CreateView):
     model = Book
-    fields = ['title', 'publication_date','author']
+    form_class = BookForm
     template_name = 'library/books_form.html'
     success_url = reverse_lazy('library:books_list')
 
@@ -24,18 +44,13 @@ class BookDetailView(DetailView):
     model = Book
     template_name = 'library/book_detail.html'
     context_object_name = 'books'
-    #
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['author_books_count'] = Book.objects.filter(author=self.object.author).count()
-    #     return context
-    #
+
 
 
 class BookUpdateView(UpdateView):
     model = Book
-    fields = ['title', 'publication_date', 'author']
-    template_name = 'library/book_form.html'
+    form_class = BookForm
+    template_name = 'library/books_form.html'
     success_url = reverse_lazy('book_list')
 
 
@@ -45,12 +60,3 @@ class BookDeleteView(DeleteView):
     success_url = reverse_lazy('book_list')
 
 
-# def books_list(request):
-#     books = Book.objects.all()
-#     context = {'books': books}
-#     return render(request, 'library/books_list.html', context)
-#
-# def book_detail(request, book_id):
-#     book = Book.objects.get(id=book_id)
-#     context = {'book': book}
-#     return render(request, 'library/book_detail.html', context)
